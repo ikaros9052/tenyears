@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>十年旅行——成功案例</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/jquery-3.0.0.min.js"></script>
+	<script src="js/myjs.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="head cf">
+			<h1 class="logo fl"><a href="javascript:">十年旅行</a></h1>
+			<ul class="nav cf fr">
+				<li><a href="index.html">十年旅行</a></li>
+				<li><a href="customize.html">团队订制</a></li>
+				<li><a href="about.html">关于我们</a></li>
+				<li><a href="case.html">成功案例</a></li>
+				<li><a href="equip.html">装备租赁</a></li>
+				<li><a href="exhibition.html">展会服务</a></li>
+			</ul>
+		</div>
+		<!-- end head -->
+		<div class="main">
+			<div class="detail_banner relative">
+				<img src="images/case-banner.jpg" width="1024" height="320" alt="">
+			</div>
+			<!-- end detail_banner -->
+			<div class="equip_nav case_nav">
+				<ul class="w903 cf">
+					<li class="active"><a href="">Team building</a></li>
+					<li><a href="">Family Day</a></li>
+					<li><a href="">企业年会</a></li>
+					<li><a href="">企业出游</a></li>
+					<li><a href="">企业福利</a></li>
+					<li><a href="">特色户外</a></li>
+				</ul>
+			</div>
+			<!-- end case_nav -->
+			<div style="background: #EEEFE9;">
+				<div class="equip_content relative">
+					<ul class="e_c_lists w903 cf">
+						<li>
+							<img src="images/tb_1.jpg" width="260" height="242" alt="">
+							<div class="good_name">
+								<p>松下出游1</p>
+								<p class="tb_trip">2013 密云·白河</p>
+							</div>
+						</li>
+						<li>
+							<img src="images/tb_2.jpg" width="260" height="242" alt="">
+							<div class="good_name">
+								<p>Barco1</p>
+								<p class="tb_trip">2013 河北·秦皇岛</p>
+							</div>
+						</li>
+						<li class="no_mr">
+							<img src="images/tb_3.jpg" width="260" height="242" alt="">
+							<div class="good_name">
+								<p>CBRE</p>
+								<p class="tb_trip">2015 房山·十渡</p>
+							</div>
+						</li>
+						<!-- 1 -->
+						<li>
+							<img src="images/tb_4.jpg" width="260" height="242" alt="">
+							<div class="good_name">
+								<p>松下出游2</p>
+								<p class="tb_trip">2013 密云·白河</p>
+							</div>
+						</li>
+						<li>
+							<img src="images/tb_5.jpg" width="260" height="242" alt="">
+							<div class="good_name">
+								<p>Barco2</p>
+								<p class="tb_trip">2013 河北·秦皇岛</p>
+							</div>
+						</li>
+						<li class="no_mr">
+							<img src="images/tb_6.jpg" width="260" height="242" alt="">
+							<div class="good_name">
+								<p>CBRE2</p>
+								<p class="tb_trip">2015 房山·十渡</p>
+							</div>
+						</li>
+						<!-- 2 -->
+						<li>
+							<img src="images/tb_7.jpg" width="260" height="242" alt="">
+							<div class="good_name">
+								<p>松下出游3</p>
+								<p class="tb_trip">2013 密云·白河</p>
+							</div>
+						</li>
+						<li>
+							<img src="images/tb_8.jpg" width="260" height="242" alt="">
+							<div class="good_name">
+								<p>Barco3</p>
+								<p class="tb_trip">2013 河北·秦皇岛</p>
+							</div>
+						</li>
+						<li class="no_mr">
+							<img src="images/tb_9.jpg" width="260" height="242" alt="">
+							<div class="good_name">
+								<p>CBRE3</p>
+								<p class="tb_trip">2015 房山·十渡</p>
+							</div>
+						</li>
+						<!-- 3 -->
+					</ul>
+					<!-- end e_c_lists -->
+					<ul class="spot_paging cf">
+						<li class="active"></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+				<!-- end equip_content -->
+			</div>
+			<!--  -->
+		</div>
+		<!-- end main -->
+		<div class="footer">
+			<div class="two_bar_codes">
+				<h2>劲十年旅行</h2>
+				<img src="images/two_bar_codes.png" width="135" height="135" alt="二维码">
+				<p>更多消息 关注订阅号</p>
+			</div>
+			<p class="copy_right">北京阿卡控股有限公司 版权所有 备案/许可证编号为：京ICP备11038582号|北京市公安局昌平分局备案编号11011402000235号</p>
+		</div>
+		<!-- end footer -->
+	</div>
+	<div class="more_trip_w" style="display:block;"></div>
+	<div class="case_w685 relative" style="display:block;">
+		<div class="case_carousel">
+			<ul class="lunbo relative cf"></ul>
+		</div>
+		<div class="carousel_btn">
+			<a class="btn_left" href="javascript:">&lt;</a>
+			<a class="btn_right" href="javascript:">&gt;</a>
+		</div>
+		<!-- case_carousel -->
+	</div>
+	<script>
+	$(function(){
+		$(".case_w685,.more_trip_w").hide();
+		var num_img=$(".e_c_lists li").length;  //获取图片个数
+		var widht_ul=num_img*685;
+		$(".case_carousel ul").css("width",widht_ul);  //设置轮播图总宽
+
+		for(var i=1;i<=num_img;i++){
+			$(".case_carousel ul").append('<li class="fl"><img src="images/tb_'+i+'.jpg" width="685" height="457" alt=""></li>')
+		}
+		// 循环插入li
+		$(".e_c_lists img").click(function(){
+			var st=$(document).scrollTop();
+			var height=st+st/7;
+			$(".case_w685,.more_trip_w").show();
+			$(".case_w685").css({"position":"absolute","top":height});
+			var index_li=$(this).parent().index();
+			// $(".lunbo").css("left","-"+index_li*685+"px");
+			$(".lunbo li").eq(index_li).fadeIn(300).siblings().fadeOut(0);
+		})
+		//向左切换函数
+		var x=0;
+		function moveL(){
+			x--;
+			if(x==-1){
+				x=num_img-1;  //如果这是第一张图片再按向左的按钮则切换到最后一张图
+			}
+			$(".lunbo li").eq(x).fadeIn(500).siblings().fadeOut(300);  //对应图片切换
+		}
+		//向右切换函数
+		function moveR(){
+			x++;
+			if(x==num_img){
+				x=0;  //如果这是最后一张图片再按向右的按钮则切换到第一张图
+			}
+			$(".lunbo li").eq(x).fadeIn(500).siblings().fadeOut(300);  //对应图片切换
+		}
+		$(".btn_left").click(function(){
+			moveL();	//点击左键调用向左切换函数
+		})
+		$(".btn_right").click(function(){
+			moveR();	//点击左键调用向左切换函数
+		})
+		$(".more_trip_w").click(function(){
+			if($(".more_trip_w").is(":visible")){
+		    	$(".more_trip_w,.case_w685").hide();
+		    }
+		    $("body").css("overflow","visible");
+		});
+	})
+	</script>
+</body>
+</html>
